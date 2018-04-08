@@ -45,9 +45,10 @@ function main(data){
         const productPriceElement = document.createElement('p');
         const productPriceValueElement = document.createElement('span');
         const productButtonElement = document.createElement('button');
-        cardRightElement.className = 'card-right';
+        cardRightElement.classList.add('card-right');
         productPriceElement.innerText = '$';
         productPriceValueElement.innerText = products[i].price;
+        productButtonElement.setAttribute('id', 'add-btn' + [i]);
         productButtonElement.innerText = 'Add to cart';
         cardRightElement.appendChild(productPriceElement);
         cardRightElement.appendChild(productButtonElement);
@@ -62,12 +63,7 @@ function main(data){
         }
     }
 
-    function createShoppingCart(){
-        
-    }
-
     displayProducts(data);
-    createShoppingCart();
 }
 
-document.addEventListener('DOMContentLoad', main(products));
+document.addEventListener('DOMContentLoaded', main(products));

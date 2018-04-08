@@ -35,6 +35,7 @@ p {
     background-color: #fff;
     border: 1px solid $third-color;
     border-radius: 2px;
+    margin-bottom: 20px;
 }
 .container {
     margin: 0 10px;
@@ -117,5 +118,27 @@ p {
     text-align: right;
     button{
         @include primary-button;
+    }
+}
+
+// -- shopping cart -- //
+
+#shopping-cart{
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid $third-color;
+    h1{
+        margin-bottom: 20px;
+        padding: 0px;
+    }
+    .product-header{
+        border: none;
+    }
+}
+#empty-cart{
+    margin-bottom: 40px;
+    p{
+        @include error-message;
+        margin: 20px 20px;
     }
 }

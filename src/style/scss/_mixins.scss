@@ -10,3 +10,13 @@
     background-color: $primary-color;
     border-radius: 5px;
 }
+
+@mixin error-message{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(255, 104, 104);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}

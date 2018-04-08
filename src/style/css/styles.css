@@ -83,6 +83,7 @@ p {
   background-color: #fff;
   border: 1px solid #d3d3d3;
   border-radius: 2px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -184,5 +185,35 @@ p {
   border: none;
   background-color: #f5a623;
   border-radius: 5px;
+}
+
+#shopping-cart {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #d3d3d3;
+}
+
+#shopping-cart h1 {
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+#shopping-cart .product-header {
+  border: none;
+}
+
+#empty-cart {
+  margin-bottom: 40px;
+}
+
+#empty-cart p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ff6868;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 20px;
 }
 /*# sourceMappingURL=styles.css.map */
