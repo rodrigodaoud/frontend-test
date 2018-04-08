@@ -14,8 +14,10 @@ function main(data){
             // --- Card Left Element --- //
             const productImageElement = document.createElement('img');
             const productInfoElement = document.createElement('div');
+            const InfoDivElement = document.createElement('div');
             const productNameElement = document.createElement('h2');
             const productColorElement = document.createElement('p');
+            const productInputElement = document.createElement('div');
             const productQuantityElement = document.createElement('input');
             // --- Card Right Element --- //
             const productPriceElement = document.createElement('p');
@@ -32,6 +34,7 @@ function main(data){
             productNameElement.innerText = products[i].name;
             productColorElement.innerText = products[i].color;
             productQuantityElement.type = 'number';
+            productQuantityElement.value = '0';
             //  --- Card Right Element --- //
             productPriceElement.innerText = '$';
             productPriceValueElement.innerText = products[i].price;
@@ -43,9 +46,11 @@ function main(data){
             // --- Card Left Element --- //
             cardLeftElement.appendChild(productImageElement);
             cardLeftElement.appendChild(productInfoElement);
-            productInfoElement.appendChild(productNameElement);
-            productInfoElement.appendChild(productColorElement);
-            productInfoElement.appendChild(productQuantityElement);
+            InfoDivElement.appendChild(productNameElement);
+            InfoDivElement.appendChild(productColorElement);
+            productInfoElement.appendChild(InfoDivElement);
+            productInfoElement.appendChild(productInputElement);
+            productInputElement.appendChild(productQuantityElement);
             // -- Card Right Element --- /
             cardRightElement.appendChild(productPriceElement);
             cardRightElement.appendChild(productButtonElement);

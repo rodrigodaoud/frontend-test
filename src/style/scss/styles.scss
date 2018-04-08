@@ -3,9 +3,9 @@
 @import 'variables';
 @import 'mixins';
 
-div{
-    border: 1px solid red;
-}
+// div{
+//     border: 1px solid red;
+// }
 
 /* ---- reset ---- */
 html {
@@ -17,39 +17,104 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: $fourth-color;
 }
 
 /* ---- typography ---- */
-body {
-    color: #111;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 147%;
-}
-h1 {}
 h2 {
     color: $secondary-color;
 }
-h3 {}
 p {
-    color: $third-color;
+    color: $fifth-color;
     margin: 0;
+    padding: 0;
 }
 
 /* ---- layout ---- */
-
+#products-list{
+    background-color: #fff;
+    border: 1px solid $third-color;
+    border-radius: 2px;
+}
 .container {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 .section {
     margin-bottom: 20px;
     padding-top: 20px;
 }
-@media (min-width: 768px) {
-    .container {
-        max-width: 728px;
-        margin: 0 auto;
-  }
-}
 
 /* ---- components ---- */
+
+// -- site-header -- //
+#site-header{
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+#site-header img{
+    width: 40%;
+    margin-left: 30%;
+}
+
+// -- product card -- //
+.product-header{
+    font-size: 26px;
+    font-family: $primary-font;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 1px solid $fourth-color;
+    h1{
+        padding-top: 10px;
+        margin-bottom: 60px;
+    }
+} 
+.labels{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: $primary-font;
+    font-weight: bold;
+}
+.product-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid $fourth-color;
+}
+.card-left{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 70px;
+        height: 70px;
+    }
+} 
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    p{
+        font-size: 12px;
+        font-family: $primary-font;
+        font-weight: bold;
+    }
+    h2{
+        font-family: $primary-font;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    input{
+        width: 20px;
+        text-align: center;
+    }
+} 
+.card-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    button{
+        @include primary-button;
+    }
+}

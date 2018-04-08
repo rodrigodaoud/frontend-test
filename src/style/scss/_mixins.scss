@@ -1,5 +1,12 @@
 @import 'variables';
 
 @mixin primary-button{
-    
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: $primary-font;
+    padding: 10px 20px;
+    border: none;
+    background-color: $primary-color;
+    border-radius: 5px;
 }

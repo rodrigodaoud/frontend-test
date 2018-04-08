@@ -52,10 +52,6 @@ table {
   border-spacing: 0;
 }
 
-div {
-  border: 1px solid red;
-}
-
 /* ---- reset ---- */
 html {
   box-sizing: border-box;
@@ -68,16 +64,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #f6f6f6;
 }
 
 /* ---- typography ---- */
-body {
-  color: #111;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 147%;
-}
-
 h2 {
   color: #272727;
 }
@@ -85,11 +75,18 @@ h2 {
 p {
   color: #868686;
   margin: 0;
+  padding: 0;
 }
 
 /* ---- layout ---- */
+#products-list {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+}
+
 .container {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .section {
@@ -97,12 +94,94 @@ p {
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 728px;
-    margin: 0 auto;
-  }
+/* ---- components ---- */
+#site-header {
+  margin-bottom: 40px;
+  background-color: #fff;
 }
 
-/* ---- components ---- */
+#site-header img {
+  width: 40%;
+  margin-left: 30%;
+}
+
+.product-header {
+  font-size: 26px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.product-header h1 {
+  padding-top: 10px;
+  margin-bottom: 60px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.card-left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-left img {
+  width: 70px;
+  height: 70px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.card-info p {
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.card-info h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-info input {
+  width: 20px;
+  text-align: center;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.card-right button {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f5a623;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=styles.css.map */
