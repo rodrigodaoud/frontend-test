@@ -163,7 +163,8 @@ p {
 }
 
 .card-info input {
-  width: 20px;
+  width: 30px;
+  padding: 5px;
   text-align: center;
 }
 
