@@ -5,7 +5,7 @@ function main(data){
     const productListMainElement = document.getElementById('products-list');
 
 
-    function displayProductsList(data){
+    function createProductCard(data){
         for(let i = 0; i < products.length; i++){
 
             const productCardElement = document.createElement('div');
@@ -56,7 +56,7 @@ function main(data){
         }
     }
 
-    displayProductsList(data);
+    createProductCard(data);
 }
 
 document.addEventListener('DOMContentLoad', main(products));

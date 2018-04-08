@@ -1,6 +1,55 @@
 @charset "UTF-8";
 @import '../../libs-polyfills/reset';
+@import 'variables';
+@import 'mixins';
 
 div{
     border: 1px solid red;
 }
+
+/* ---- reset ---- */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- typography ---- */
+body {
+    color: #111;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 147%;
+}
+h1 {}
+h2 {
+    color: $secondary-color;
+}
+h3 {}
+p {
+    color: $third-color;
+    margin: 0;
+}
+
+/* ---- layout ---- */
+
+.container {
+    margin: 0 20px;
+}
+.section {
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 728px;
+        margin: 0 auto;
+  }
+}
+
+/* ---- components ---- */
