@@ -11,6 +11,8 @@
     "jquery": true
   },
   "rules": {
+    "no-console": 0,
+    "no-undef": 0,
     "max-len": [
       "error",
       100
