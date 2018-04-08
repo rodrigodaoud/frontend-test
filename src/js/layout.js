@@ -13,7 +13,6 @@ function main(data){
     }
 
     function createCardLeftElements (data, i, productCardElement){
-        // const productCardElement = document.getElementsByClassName('product-card');
         const cardLeftElement = document.createElement('div');
         const productImageElement = document.createElement('img');
         const productInfoElement = document.createElement('div');
@@ -37,7 +36,6 @@ function main(data){
         productInfoElement.appendChild(productInputElement);
         productInputElement.appendChild(productQuantityElement);
         productCardElement.appendChild(cardLeftElement);
-        // productListMainElement.appendChild(cardLeftElement);
     }
 
     function createCardRightElements (data, i, productCardElement){
@@ -48,13 +46,12 @@ function main(data){
         cardRightElement.classList.add('card-right');
         productPriceElement.innerText = '$';
         productPriceValueElement.innerText = products[i].price;
-        productButtonElement.setAttribute('id', 'add-btn' + [i]);
+        productButtonElement.setAttribute('id', 'add-btn');
         productButtonElement.innerText = 'Add to cart';
         cardRightElement.appendChild(productPriceElement);
         cardRightElement.appendChild(productButtonElement);
         productPriceElement.appendChild(productPriceValueElement);
         productCardElement.appendChild(cardRightElement);
-        // productListMainElement.appendChild(cardRightElement);
     }
 
     function displayProducts(data) {
@@ -64,6 +61,7 @@ function main(data){
     }
 
     displayProducts(data);
+    
 }
 
 document.addEventListener('DOMContentLoaded', main(products));

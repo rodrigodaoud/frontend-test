@@ -136,7 +136,6 @@ p {
 
 .card-left {
   display: flex;
-  justify-content: space-between;
 }
 
 .card-left img {
