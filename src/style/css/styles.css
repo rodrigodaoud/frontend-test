@@ -95,6 +95,10 @@ p {
   padding-top: 20px;
 }
 
+.desktop {
+  display: none;
+}
+
 /* ---- components ---- */
 #site-header {
   margin-bottom: 40px;
@@ -187,7 +191,6 @@ p {
 }
 
 #shopping-cart {
-  padding: 10px;
   background-color: #fff;
   border-top: 1px solid #d3d3d3;
 }
@@ -199,6 +202,10 @@ p {
 
 #shopping-cart .product-header {
   border: none;
+}
+
+#shopping-cart .final-footer {
+  padding: 10px;
 }
 
 #empty-cart {
@@ -214,5 +221,96 @@ p {
   padding: 20px;
   text-align: center;
   margin: 20px 20px;
+}
+
+.final-products {
+  margin-bottom: 20px;
+}
+
+.final-products .final-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.final-products .final-price {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.final-products #remove-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #868686;
+}
+
+.final-cupon {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.final-cupon p {
+  color: #272727;
+  font-size: 20px;
+}
+
+.final-cupon input {
+  padding: 5px 10px;
+}
+
+.checkout {
+  margin-bottom: 40px;
+}
+
+.checkout button {
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f5a623;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    margin: 0 20px;
+  }
+  .desktop {
+    display: flex;
+  }
+  #site-header img {
+    width: 20%;
+    margin-left: 40%;
+  }
+  .card-info {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card-info input {
+    width: 50px;
+  }
+  .card-left {
+    width: 52%;
+  }
+  #empty-cart p {
+    width: 50%;
+    margin: auto;
+  }
+  .checkout {
+    text-align: right;
+  }
+  .checkout button {
+    width: 30%;
+    margin-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

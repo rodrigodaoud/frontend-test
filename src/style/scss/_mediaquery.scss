@@ -1,0 +1,38 @@
+@media only screen and (min-width: 1024px){
+    .container{
+        margin: 0 20px;
+    }
+    .desktop{
+        display: flex;
+    }
+    #site-header img{
+        width: 20%;
+        margin-left: 40%;
+    }
+
+    // -- Products List -- //
+    .card-info{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        input{
+            width: 50px;
+        }
+    }
+    .card-left{
+        width: 52%;
+    }
+
+    // -- Shopping Cart -- //
+    #empty-cart p{
+        width: 50%;
+        margin: auto;
+    }
+    .checkout{
+        text-align: right;
+        button{
+            width: 30%;
+            margin-bottom: 40px;
+        }
+    }
+}

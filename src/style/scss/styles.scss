@@ -44,6 +44,9 @@ p {
     margin-bottom: 20px;
     padding-top: 20px;
 }
+.desktop{
+    display: none;
+}
 
 /* ---- components ---- */
 
@@ -123,7 +126,6 @@ p {
 // -- shopping cart -- //
 
 #shopping-cart{
-    padding: 10px;
     background-color: #fff;
     border-top: 1px solid $third-color;
     h1{
@@ -133,6 +135,9 @@ p {
     .product-header{
         border: none;
     }
+    .final-footer{
+        padding: 10px;
+    }
 }
 #empty-cart{
     margin-bottom: 40px;
@@ -141,3 +146,44 @@ p {
         margin: 20px 20px;
     }
 }
+.final-products{
+    margin-bottom: 20px;
+    .final-card{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        border-bottom: 1px solid $fourth-color;
+    }
+    .final-price{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #remove-btn{
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: $fifth-color;
+    }
+}
+.final-cupon{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    p{
+        color: $secondary-color;
+        font-size: 20px;
+    }
+    input{
+        padding: 5px 10px;
+    }
+}
+.checkout{
+    margin-bottom: 40px;
+    button{
+        width: 100%;
+        @include primary-button;
+        font-size: 16px;
+    }
+}
+@import 'mediaquery';

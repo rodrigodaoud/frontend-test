@@ -40,11 +40,14 @@ function main(){
   function handleRemoveItem(e){
     e.currentTarget.parentNode.parentNode.remove();
     remTotalPrice();
+    if (checkoutPrice.innerText == 0){
+      errorMessageElement.style = 'display: block';
+    }
   }
 
   function handleAddToCart(e){
     const quantityInputValue = (e.currentTarget.parentNode.parentNode.firstChild.lastChild.lastChild.firstChild.value);
-    if(quantityInputValue != 0){
+    if(quantityInputValue > 0){
       errorMessageElement.style = 'display: none';
       
       const calculatedFinalPriceElement = (e.currentTarget.parentNode.firstChild.lastChild.innerText) * quantityInputValue;
@@ -54,7 +57,7 @@ function main(){
       createFinalPriceElements(calculatedFinalPriceElement);
       sumTotalPrice();
     }
-    else if(quantityInputValue == 0){
+    else if(quantityInputValue <= 0){
       alert('The product quantity must be more than 0');
     }
   } 
