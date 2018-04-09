@@ -5,17 +5,20 @@ function main(){
   const errorMessageElement = document.getElementById('empty-cart');
   const addToCartButtonElements = document.querySelectorAll('#add-btn');
   const shoppingCartElement = document.querySelector('.final-products');
+  const checkoutPrice = document.getElementById('total');
+  let priceArray = [];
   let finalProductCardElement;
   let removeButtonElement;
   let removeButtons;
   let productInfo
   let cloneProductInfo;
-  
+  let totalPriceElement;
+
   function createFinalPriceElements(finalPrice) {
     finalProductCardElement = document.createElement('div');
     removeButtonElement = document.createElement('button');
+    totalPriceElement = document.createElement('p');
     const finalPriceContainerElement = document.createElement('div');
-    const totalPriceElement = document.createElement('p');
     
     finalPriceContainerElement.classList.add('final-price');
     finalProductCardElement.setAttribute('class', 'final-card');
@@ -36,6 +39,7 @@ function main(){
   
   function handleRemoveItem(e){
     e.currentTarget.parentNode.parentNode.remove();
+    remTotalPrice();
   }
 
   function handleAddToCart(e){
@@ -48,6 +52,7 @@ function main(){
       cloneProductInfo = productInfo.cloneNode(true);
       
       createFinalPriceElements(calculatedFinalPriceElement);
+      sumTotalPrice();
     }
     else if(quantityInputValue == 0){
       alert('The product quantity must be more than 0');
@@ -58,6 +63,22 @@ function main(){
     for (let i = 0; i < addToCartButtonElements.length; i++){
       addToCartButtonElements[i].addEventListener('click', handleAddToCart);
     }
+  }
+
+  function sumTotalPrice(){
+    priceArray.push(parseFloat(totalPriceElement.innerText));
+    let sumPrice = priceArray.reduce(function (a, b){
+      return a + b;
+    }, 0)
+    checkoutPrice.innerText = sumPrice;
+  }
+
+  function remTotalPrice(){
+    priceArray.pop(parseFloat(totalPriceElement.innerText));
+    let remPrice = priceArray.reduce(function(a, b){
+      return a - b;
+    }, 0);
+    checkoutPrice.innerText = remPrice * -1;
   }
   addEventHandler();
 }
